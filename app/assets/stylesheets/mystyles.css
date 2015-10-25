@@ -1,0 +1,7 @@
+p {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;              /* "overflow" value must be different from "visible" */
+
+  text-overflow: ellipsis;
+}
