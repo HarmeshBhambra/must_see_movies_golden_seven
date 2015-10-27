@@ -1,0 +1,14 @@
+<h1><%= @i.name %></h1>
+
+<div class="container">
+    <div class="row">
+      <a href="http://localhost:3000/directors/edit_form/<%= @i.id %>">Edit</a>
+      <a href="http://localhost:3000/directors/delete/<%= @i.id %>">Delete</a>
+    <div class="row">
+        <div class="col-sm-2"> <%= @i.dob %></div>
+        <div class="col-sm-8"> <img src="<%= @i.image_url %>"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10"> <%= @i.bio %> </div>
+    </div>
+</div>
