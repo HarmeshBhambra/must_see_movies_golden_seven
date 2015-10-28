@@ -1,0 +1,28 @@
+<h1>Actors</h1>
+
+<a href="http://localhost:3000/actors/new_form">Add a New Actor</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">Name</div>
+        <div class="col-sm-2">Bio</div>
+        <div class="col-sm-2">DOB</div>
+        <div class="col-sm-4">Image</div>
+        <div class="col-sm-2">Actions</div>
+    </div>
+    <% @list_of_actors.each do |actor| %>
+    <div class="row">
+        <div class="col-sm-2"> <%= actor.name %> </div>
+        <div class="col-sm-2">
+            <p><%= actor.bio %></p>
+        </div>
+        <div class="col-sm-2"> <%= actor.dob %> </div>
+        <div class="col-sm-4"> <img src="<%= actor.image_url %>" width="80"> </div>
+        <div class="col-sm-2">
+            <a href="http://localhost:3000/actors/<%= actor.id %>">Read</a>
+            <a href="http://localhost:3000/actors/edit_form/<%= actor.id %>">Edit</a>
+            <a href="http://localhost:3000/actors/delete/<%= actor.id %>">Delete</a>
+        </div>
+    </div>
+    <% end %>
+</div>

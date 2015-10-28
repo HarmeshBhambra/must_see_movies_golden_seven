@@ -1,0 +1,30 @@
+<h1>Movies</h1>
+
+<a href="http://localhost:3000/movies/new_form">Add a New Movie</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">Title</div>
+        <div class="col-sm-1">Year</div>
+        <div class="col-sm-1">Duration</div>
+        <div class="col-sm-4">Description</div>
+        <div class="col-sm-2">Image</div>
+        <div class="col-sm-2">Actions</div>
+    </div>
+    <% @list_of_movies.each do |movie| %>
+    <div class="row">
+        <div class="col-sm-2"> <%= movie.title %> </div>
+        <div class="col-sm-1"> <%= movie.year %> </div>
+        <div class="col-sm-1"> <%= movie.duration %> </div>
+        <div class="col-sm-4">
+            <p><%= movie.description %></p>
+        </div>
+        <div class="col-sm-2"> <img src="<%= movie.image_url %>" width="80"> </div>
+        <div class="col-sm-2">
+            <a href="http://localhost:3000/movies/<%= movie.id %>">Read</a>
+            <a href="http://localhost:3000/movies/edit_form/<%= movie.id %>">Edit</a>
+            <a href="http://localhost:3000/movies/delete/<%= movie.id %>">Delete</a>
+        </div>
+    </div>
+    <% end %>
+</div>
