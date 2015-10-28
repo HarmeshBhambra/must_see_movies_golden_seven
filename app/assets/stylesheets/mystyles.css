@@ -5,3 +5,10 @@ p {
 
   text-overflow: ellipsis;
 }
+
+.thumbnail {
+  height: 400px;
+}
+.thumbnail_image {
+  height: 250px;
+}
